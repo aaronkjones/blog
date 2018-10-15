@@ -1,9 +1,3 @@
-[submodule "themes/hugo-future-imperfect"]
-	path = themes/hugo-future-imperfect
-	url = https://github.com/jpescador/hugo-future-imperfect.git
-[submodule "themes/ananke"]
-	path = themes/ananke
-	url = https://github.com/budparr/gohugo-theme-ananke.git
 [submodule "public"]
 	path = public
 	url = git@github.com:aaronkjones/aaronkjones.github.io.git

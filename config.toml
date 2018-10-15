@@ -55,7 +55,7 @@ noshowreadtime         = false                         # if true, don't show "<x
 selfintro              = ""                            # appears in the site header when set to a non-empty string
 twitter                = "//twitter.com/akjones"
 #mastodon               = "//example.com/@you"
-#telegram               = "//t.me/you"
+telegram               = "//t.me/aaronkjones"
 
 highlightjs            = true
 # highlightjslanguages = ["go"]                        # additional languages not included in the "common" set
