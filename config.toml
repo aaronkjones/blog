@@ -1,197 +1,81 @@
-baseurl = "/"
-languageCode = "en-us"
-title = "Hugo Future Imperfect"
-theme = "hugo-future-imperfect"
-preserveTaxonomyNames = true
-paginate = 3
-disqusShortname = "shortname"
-googleAnalytics = ""
-pluralizeListTitles = false
-# Set the followings to true as part of your site SEO
-enableRobotsTXT = true
-canonifyURLs = true
+baseurl             = "https://aaronkjones.github.io/"
+builddrafts         = false
+canonifyurls        = true
+contentdir          = "content"
+languageCode        = "en-US"
+layoutdir           = "layouts"
+publishdir          = "public"
+theme               = "cocoa"
+author              = "Aaron Jones"
+title               = "Aaron Jones"
+pygmentsuseclasses  = true
+disqusshortname     = "aaronkjones" # Comment out to disable Disqus.
+pluralizelisttitles = false
+googleAnalytics     = "UA-114562131-1"
+
+[permalinks]
+blog  = "blog/:slug/"
+
+[[menu.main]]
+name                   = "Blog"
+weight                 = -120
+identifier             = "blog"
+url                    = "/blog/"
+
+[[menu.main]]
+name                   = "About"
+weight                 = -110
+identifier             = "about"
+url                    = "/about/"
+
+[[menu.main]]
+name                   = "Projects"
+weight                 = -100
+identifier             = "projects"
+url                    = "/projects/"
 
 [params]
-  # Sets the meta tag description
-  description          = "HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"
-  # Sets the navbarTitle that appears in the top left of the navigation bar
-  navbarTitle          = "Future Imperfect"
-  # Sets where "View More Posts" links
-  viewMorePostLink     = "/blog/"
+include_rss            = true                          # include RSS <link> tag in <head> and show RSS icon
+latestpostscount       = 5                             # how many posts to display on the home page
+i18n_flags             = false                         # whether to display small country flags for available translations
+author                 = "Aaron Jones"
+cachebuster            = true                          # add the current unix timestamp in query string for cache busting css assets
+dateform               = "Jan 2, 2006"
+dateformfull           = "Mon Jan 2 2006 15:04:05 MST"
+description            = "Don't panic"
+#email                  = "you@example.space"
+extracssfiles          = [ "/css/override.css" ]       # In your `static` directory, add/remove files as necessary.
+faviconfile            = "img/favicon.ico"
+github                 = "//github.com/aaronkjones"
+#instagram              = "//instagram.com/you"
+#px500                  = "//500px.com/username"
+lang                   = "en"
+linkedin               = "//linkedin.com/in/jonesak"
+noshowreadtime         = false                         # if true, don't show "<x> minutes read" in posts
+selfintro              = ""                            # appears in the site header when set to a non-empty string
+twitter                = "//twitter.com/akjones"
+#mastodon               = "//example.com/@you"
+#telegram               = "//t.me/you"
 
-# Optional Params
-  # Sets navbarTitle to match the section of the website
-  dynamicTitles        = true
-  # Sets RSS icons to appear on the sidebar with the social media buttons
-  rssAppearAtTop       = true
-  rssAppearAtBottom    = true
-  # Sets Social Media icons to appear on the sidebar
-  socialAppearAtTop    = true
-  socialAppearAtBottom = true
-  # Sets Categories to sort by number of posts instead of alphabetical
-  categoriesByCount    = true
-  # set to show or to hide categories in the sidebar
-  showSidebarCategories = true
-  # Sets Estimated Reading Time to appear in post headers
-  includeReadingTime   = true
-  # Sets the Favicon and Version for the site. Default support is for
-  # apple-touch-icon-precomposed.png, favicon.png, favicon.ico, and mstile.png.
-  # These are stored in the favicon folder. See the following for more information:
-  # https://github.com/audreyr/favicon-cheat-sheet
-  loadFavicon          = false
-  faviconVersion       = ""
-  # Sets Social Share links to appear on posts
-  socialShare          = true
-  # Sets specific share to appear on posts (default behavior is to appear)
-  socialShareTwitter   = true
-  socialShareGoogleplus = true
-  socialShareFacebook  = true
-  socialShareReddit    = true
-  socialShareLinkedin  = true
-  socialShareStumbleupon = true
-  socialSharePinterest = true
-  socialShareEmail     = true
+highlightjs            = true
+# highlightjslanguages = ["go"]                        # additional languages not included in the "common" set
+highlightjsStyle     = "darcula"
 
-  # Load custom CSS or JavaScript files. The variable is an array so that you
-  # can load multiple files if necessary. You can also load the standard theme
-  # files by adding the value, "default".
-  # customCSS            = ["default", "/path/to/file"]
-  # customJS             = ["default", "/path/to/file"]
-  customCSS            = ["default"]
-  customJS             = ["default"]
+piwik                  = false                         # If true, Piwik integration is enabled
+# piwik_url            = "//www.example.com/piwik/"    # URL to your Piwik installation. Must End with a slash
+# piwik_id             = 2                             # Id of your site in Piwik
 
-  # options for highlight.js (version, additional languages, and theme)
-  disable_highlight = false # set to true to disable Highlight
-  highlightjsVersion = "9.11.0"
-  highlightjsCDN = "//cdn.bootcss.com"
-  highlightjsLang = ["r", "yaml", "css"]
-  highlightjsTheme = "github"
-  MathJaxCDN = "//cdn.bootcss.com"
-  MathJaxVersion = "2.7.1"
+gitalk                 = false
+# if gitalk is true, the following params should be set. These parameters could be retrieved from github OAuth
+gitalk_clientID        = "your client id"
+gitalk_clientSecret    = "your client secret"
+gitalk_repo            = "your repo url"
+gitalk_owner           = "the owner of this repo"
+gitalk_admin           = ['a', 'list', 'of', 'administrator']
 
-# Disqus will take priority over Staticman (github.com/eduardoboucas/staticman)
-# due to its ease of use. Feel free to check out both and decide what you would
-# prefer to use. See Staticman.yml for additional settings.
-[params.staticman]
-  # Sets Statiman to be active
-  staticman = false
-  # Sets the location for Staticman to connect to
-  username  = ""
-  repo      = ""
-  branch    = ""
+avatar                 = "img/profile.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
+# gravatar             = ""                # gravatar hash. see https://en.gravatar.com/site/implement/hash/. do not use in the same time as avatar
 
-  [params.staticman.recaptcha]
-    sitekey = "SITE_KEY"
-    secret  = "ENCRYPTED_SECRET"
-
-  # These are optional params related to the sidebar. They are recommended, but not
-  # required for proper functionality. HTML is supported within the params.
-[params.intro]
-  header    = "Hugo Future Imperfect"
-
-  paragraph = "Another fine responsive site template by <a href=\"http://html5up.net\">HTML5 UP</a>. Ported by Julio Pescador with some extra goodies <i class='fa fa-hand-peace-o'></i>"
-
-  about     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
-
-  # This appears at the top of the sidebar above params.intro.header.
-  # A width of less than 100px is recommended from a design perspective.
-  [params.intro.pic]
-    src       = "/img/main/logo.jpg"
-    # Sets Image to be a cirlce
-    circle    = false
-    # Sets Image to be Future Imperfect's hexagon
-    imperfect = true
-    width     = ""
-    alt       = "Hugo Future Imperfect"
-
-[params.postAmount]
-# Sets the number of recent posts to show in the sidebar. The default value is 5.
-    sidebar = 5
-
-# Sets the menu items in the navigation bar
-# Identifier prepends a Font Awesome icon to the menu item
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  identifier = "fa fa-home"
-  weight = 1
-
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  identifier = "fa fa-id-card-o"
-  weight = 2
-
-[[menu.main]]
-  name = "Blog"
-  url = "/blog/"
-  identifier = "fa fa-newspaper-o"
-  weight = 3
-
-[[menu.main]]
-  name = "Itemized"
-  url = "/itemized/"
-  identifier = "fa fa-list"
-  weight = 4
-
-[[menu.main]]
-  name = "Categories"
-  url = "/categories/"
-  identifier = "fa fa-sitemap"
-  weight = 5
-
-[[menu.main]]
-  name = "Contact"
-  url = "/contact/"
-  identifier = "fa fa-envelope-o"
-  weight = 6
-
-# Sets Social Media icons to appear and link to your account. Value should be your
-# username unless otherwise noted. These are the icons affected by socialAppearAtTop
-# and socialAppearAtBottom.
-[social]
-  # Coding Communities
-  github           = "jpescador/hugo-future-imperfect"
-  gitlab           = ""
-  stackoverflow    = "" # User Number
-  bitbucket        = ""
-  jsfiddle         = ""
-  codepen          = ""
-  # Visual Art Communities
-  deviantart       = ""
-  flickr           = "example"
-  behance          = ""
-  dribbble         = ""
-  # Publishing Communities
-  wordpress        = ""
-  medium           = ""
-  # Professional/Business Oriented Communities
-  linkedin         = "example"
-  linkedin_company = "examplebusiness"
-  foursquare       = ""
-  xing             = ""
-  slideshare       = ""
-  # Social Networks
-  facebook         = "example"
-  googleplus       = ""
-  reddit           = "example"
-  quora            = ""
-  youtube          = ""
-  vimeo            = ""
-  whatsapp         = "" # WhatsApp Number
-    # WeChat and QQ need testing.
-    wechat         = ""
-    qq             = "" # User ID Number
-  instagram        = "example"
-  tumblr           = ""
-  twitter          = "example"
-  skype            = ""
-  snapchat         = ""
-  pinterest        = "example"
-  telegram         = "example"
-  vine             = ""
-  googlescholar    = ""
-  orcid            = ""
-  researchgate     = "example"
-  # Email
-  email            = "example"
+# The following are DEPRECATED.
+gatracker              = "XYZ" # use googleAnalytics instead
+initials               = "ad"  # displayed on single post page; deprecated in v0.3.0.
