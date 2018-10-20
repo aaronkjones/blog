@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aaron Jones</title>
+    <link>https://aaronkjones.github.io/</link>
+    <description>Recent content on Aaron Jones</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 10 Feb 2018 17:58:51 -0700</lastBuildDate>
+    
+	<atom:link href="https://aaronkjones.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vpn Server Select</title>
+      <link>https://aaronkjones.github.io/blog/vpn-server-select/</link>
+      <pubDate>Sat, 10 Feb 2018 17:58:51 -0700</pubDate>
+      
+      <guid>https://aaronkjones.github.io/blog/vpn-server-select/</guid>
+      <description>This post explains how to set a VPN connection on a home router. I am using a Netgear R6300V2 with DD-WRT.
+For DD-WRT, you can check if your router is supported in the Router Database.
+Enable the CLI The CLI is disabled by default. It must be enabled to continue.
+Tested on DD-WRT version 24+
+ Load the DD-WRT WebUI (typically at http://192.168.1.1) Go to the Services tab Enable SSHd in the Secure Shell section Paste your public key (echo ~/id_rsa.</description>
+    </item>
+    
+    <item>
+      <title>Vpn Speed Test</title>
+      <link>https://aaronkjones.github.io/blog/vpn-speed-test/</link>
+      <pubDate>Sat, 13 Jan 2018 18:00:02 -0700</pubDate>
+      
+      <guid>https://aaronkjones.github.io/blog/vpn-speed-test/</guid>
+      <description>This script will automate selecting the best VPN server from a given list of servers your provider offers.
+Requirements  OpenVPN Client speedtest-cli Linux/POSIX/Bash for Windows  I am using usenetserver.com. In your case, these settings may differ.
+#!/bin/bash # List of hosts to test HOSTS_FILE=inventory # Your VPN provider&#39;s base config BASE_CONF=uns.conf # A temp config that will have a new host for each run TEMP_CONF=temp.conf # Results RESULTS_FILE=speedresults # Read hosts from file while read -r HOST; do # Delete old results file if it exists if [ -a $RESULTS_FILE ]; then rm &amp;quot;$RESULTS_FILE&amp;quot; fi # Change config to current host sed &amp;quot;s|^remote\\ .</description>
+    </item>
+    
+  </channel>
+</rss>
