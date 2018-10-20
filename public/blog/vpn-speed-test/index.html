@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Aaron Jones">
+<meta name="description" content="This script will automate selecting the best VPN server from a given list of servers your provider offers.
+Requirements  OpenVPN Client speedtest-cli Linux/POSIX/Bash for Windows  I am using usenetserver.com. In your case, these settings may differ.
+#!/bin/bash # List of hosts to test HOSTS_FILE=inventory # Your VPN provider&#39;s base config BASE_CONF=uns.conf # A temp config that will have a new host for each run TEMP_CONF=temp.conf # Results RESULTS_FILE=speedresults # Read hosts from file while read -r HOST; do # Delete old results file if it exists if [ -a $RESULTS_FILE ]; then rm &quot;$RESULTS_FILE&quot; fi # Change config to current host sed &quot;s|^remote\\ .">
+
+<meta property="og:title" content="Vpn Speed Test" />
+<meta property="og:description" content="This script will automate selecting the best VPN server from a given list of servers your provider offers.
+Requirements  OpenVPN Client speedtest-cli Linux/POSIX/Bash for Windows  I am using usenetserver.com. In your case, these settings may differ.
+#!/bin/bash # List of hosts to test HOSTS_FILE=inventory # Your VPN provider&#39;s base config BASE_CONF=uns.conf # A temp config that will have a new host for each run TEMP_CONF=temp.conf # Results RESULTS_FILE=speedresults # Read hosts from file while read -r HOST; do # Delete old results file if it exists if [ -a $RESULTS_FILE ]; then rm &quot;$RESULTS_FILE&quot; fi # Change config to current host sed &quot;s|^remote\\ ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aaronkjones.com/blog/vpn-speed-test/" /><meta property="article:published_time" content="2018-01-13T18:00:02-07:00"/>
+<meta property="article:modified_time" content="2018-01-13T18:00:02-07:00"/>
+
+<title>
+
+
+     Vpn Speed Test 
+
+</title>
+<link rel="canonical" href="https://aaronkjones.com/blog/vpn-speed-test/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/darcula.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://aaronkjones.com/css/reset.css?t=2018-10-15%2007%3a36%3a30.539474%20-0700%20PDT%20m%3d%2b0.238229808">
+    <link rel="stylesheet" href="https://aaronkjones.com/css/pygments.css?t=2018-10-15%2007%3a36%3a30.539474%20-0700%20PDT%20m%3d%2b0.238229808">
+    <link rel="stylesheet" href="https://aaronkjones.com/css/main.css?t=2018-10-15%2007%3a36%3a30.539474%20-0700%20PDT%20m%3d%2b0.238229808">
+    
+        <link rel="stylesheet" href="https://aaronkjones.com/css/override.css?t=2018-10-15%2007%3a36%3a30.539474%20-0700%20PDT%20m%3d%2b0.238229808">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://aaronkjones.com/img/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                
+                
+                <a href="https://aaronkjones.com/"><img class="avatar" src="https://aaronkjones.com/img/profile.png" srcset="https://aaronkjones.com/img/profile.png 1x,https://aaronkjones.com/img/profile-2x.png 2x,https://aaronkjones.com/img/profile-3x.png 3x,https://aaronkjones.com/img/profile-4x.png 4x"></a>
+            
+            <a href="https://aaronkjones.com/"><div class="name">Aaron Jones</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://aaronkjones.com/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://aaronkjones.com/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-projects"><a href="https://aaronkjones.com/projects/"><span>Projects</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/aaronkjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.com/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+            <a href="//twitter.com/akjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.com/img/twitter.svg" alt="twitter" /></a>
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/jonesak" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.com/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+            <a href="//t.me/aaronkjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.com/img/telegram.svg" alt="telegram" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Vpn Speed Test
+
+</div>
+
+                    <div class="initials"><a href="https://aaronkjones.com">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Sat Jan 13 2018 18:00:02 -0700'>Jan 13, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>This script will automate selecting the best VPN server from a given list of servers your provider offers.</p>
+
+<h1 id="requirements">Requirements</h1>
+
+<ul>
+<li>OpenVPN Client</li>
+<li>speedtest-cli</li>
+<li>Linux/POSIX/Bash for Windows</li>
+</ul>
+
+<p>I am using usenetserver.com. In your case, these settings may differ.</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+# List of hosts to test
+HOSTS_FILE=inventory
+
+# Your VPN provider's base config
+BASE_CONF=uns.conf
+
+# A temp config that will have a new host for each run
+TEMP_CONF=temp.conf
+
+# Results
+RESULTS_FILE=speedresults
+
+# Read hosts from file
+while read -r HOST;
+do
+
+# Delete old results file if it exists
+if [ -a $RESULTS_FILE ]; then
+    rm &quot;$RESULTS_FILE&quot;
+fi
+
+# Change config to current host
+sed &quot;s|^remote\\ .*|remote $HOST|&quot; $BASE_CONF &gt; $TEMP_CONF
+
+# Connect OpenVPN
+sudo openvpn --config &quot;$TEMP_CONF&quot; --daemon
+
+# Run speedtest and store result
+{ echo &quot;$HOST, &quot;; speedtest --simple; printf &quot; \\n&quot;; } &gt;&gt; $RESULTS_FILE
+
+# Disconnect OpenVPN
+sudo kill -TERM &quot;$(ps aux | awk '/[o]penvpn/ {print $2}')&quot;
+
+# Wait for process to die
+sleep 5
+
+# Display results
+cat $RESULTS_FILE
+
+done &lt; &quot;$HOSTS_FILE&quot;
+rm &quot;$TEMP_CONF&quot;
+</code></pre>
+
+<p>What it does:</p>
+
+<ul>
+<li>Read a server from a list of servers (inventory)</li>
+<li>Modify the OpenVPN config to use that server</li>
+<li>Connect OpenVPN with new config * Run a speedtest using speedtest-cli</li>
+<li>Display the results</li>
+</ul>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://aaronkjones.com/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aaron-jones" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-114562131-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
