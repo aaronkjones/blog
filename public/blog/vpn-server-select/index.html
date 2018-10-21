@@ -22,8 +22,24 @@ Enable the CLI The CLI is disabled by default. It must be enabled to continue.
 Tested on DD-WRT version 24&#43;
  Load the DD-WRT WebUI (typically at http://192.168.1.1) Go to the Services tab Enable SSHd in the Secure Shell section Paste your public key (echo ~/id_rsa." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://aaronkjones.com/blog/vpn-server-select/" /><meta property="article:published_time" content="2018-02-10T17:58:51-07:00"/>
+<meta property="og:url" content="https://aaronkjones.github.io/blog/vpn-server-select/" />
+
+
+
+<meta property="article:published_time" content="2018-02-10T17:58:51-07:00"/>
+
 <meta property="article:modified_time" content="2018-02-10T17:58:51-07:00"/>
+
+
+
+
+
+
+
+
+
+
+
 
 <title>
 
@@ -31,7 +47,7 @@ Tested on DD-WRT version 24&#43;
      Vpn Server Select 
 
 </title>
-<link rel="canonical" href="https://aaronkjones.com/blog/vpn-server-select/">
+<link rel="canonical" href="https://aaronkjones.github.io/blog/vpn-server-select/">
 
 
 
@@ -49,11 +65,11 @@ Tested on DD-WRT version 24&#43;
 
 
     
-    <link rel="stylesheet" href="https://aaronkjones.com/css/reset.css?t=2018-10-15%2007%3a36%3a30.539556%20-0700%20PDT%20m%3d%2b0.238311939">
-    <link rel="stylesheet" href="https://aaronkjones.com/css/pygments.css?t=2018-10-15%2007%3a36%3a30.539556%20-0700%20PDT%20m%3d%2b0.238311939">
-    <link rel="stylesheet" href="https://aaronkjones.com/css/main.css?t=2018-10-15%2007%3a36%3a30.539556%20-0700%20PDT%20m%3d%2b0.238311939">
+    <link rel="stylesheet" href="https://aaronkjones.github.io/css/reset.css?t=2018-10-20%2020%3a07%3a25.775008%20-0700%20PDT%20m%3d%2b0.103994185">
+    <link rel="stylesheet" href="https://aaronkjones.github.io/css/pygments.css?t=2018-10-20%2020%3a07%3a25.775008%20-0700%20PDT%20m%3d%2b0.103994185">
+    <link rel="stylesheet" href="https://aaronkjones.github.io/css/main.css?t=2018-10-20%2020%3a07%3a25.775008%20-0700%20PDT%20m%3d%2b0.103994185">
     
-        <link rel="stylesheet" href="https://aaronkjones.com/css/override.css?t=2018-10-15%2007%3a36%3a30.539556%20-0700%20PDT%20m%3d%2b0.238311939">
+        <link rel="stylesheet" href="https://aaronkjones.github.io/css/override.css?t=2018-10-20%2020%3a07%3a25.775008%20-0700%20PDT%20m%3d%2b0.103994185">
     
 
 
@@ -61,7 +77,7 @@ Tested on DD-WRT version 24&#43;
 
 <link rel="shortcut icon"
 
-    href="https://aaronkjones.com/img/favicon.ico"
+    href="https://aaronkjones.github.io/img/favicon.ico"
 
 >
 
@@ -91,8 +107,6 @@ Tested on DD-WRT version 24&#43;
                     
                 
                     
-                
-                    
                         
                     
                 
@@ -107,18 +121,18 @@ Tested on DD-WRT version 24&#43;
                     
                 
                 
-                <a href="https://aaronkjones.com/"><img class="avatar" src="https://aaronkjones.com/img/profile.png" srcset="https://aaronkjones.com/img/profile.png 1x,https://aaronkjones.com/img/profile-2x.png 2x,https://aaronkjones.com/img/profile-3x.png 3x,https://aaronkjones.com/img/profile-4x.png 4x"></a>
+                <a href="https://aaronkjones.github.io/"><img class="avatar" src="https://aaronkjones.github.io/img/profile.png" srcset="https://aaronkjones.github.io/img/profile.png 1x,https://aaronkjones.github.io/img/profile-2x.png 2x,https://aaronkjones.github.io/img/profile-3x.png 3x,https://aaronkjones.github.io/img/profile-4x.png 4x"></a>
             
-            <a href="https://aaronkjones.com/"><div class="name">Aaron Jones</div></a>
+            <a href="https://aaronkjones.github.io/"><div class="name">Aaron Jones</div></a>
             
             <nav>
                 <ul>
                     
-                        <li class="nav-blog"><a href="https://aaronkjones.com/blog/"><span>Blog</span></a></li>
+                        <li class="nav-blog"><a href="https://aaronkjones.github.io/blog/"><span>Blog</span></a></li>
                     
-                        <li class="nav-about"><a href="https://aaronkjones.com/about/"><span>About</span></a></li>
+                        <li class="nav-about"><a href="https://aaronkjones.github.io/about/"><span>About</span></a></li>
                     
-                        <li class="nav-projects"><a href="https://aaronkjones.com/projects/"><span>Projects</span></a></li>
+                        <li class="nav-projects"><a href="https://aaronkjones.github.io/projects/"><span>Projects</span></a></li>
                     
                 </ul>
             </nav>
@@ -130,13 +144,13 @@ Tested on DD-WRT version 24&#43;
     <div class="container">
         <div class="content">
         
-            <a href="//github.com/aaronkjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.com/img/github.svg" alt="github" /></a>
+            <a href="//github.com/aaronkjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.github.io/img/github.svg" alt="github" /></a>
         
 
         
 
         
-            <a href="//twitter.com/akjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.com/img/twitter.svg" alt="twitter" /></a>
+            <a href="//twitter.com/akjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.github.io/img/twitter.svg" alt="twitter" /></a>
         
 
 	
@@ -146,13 +160,13 @@ Tested on DD-WRT version 24&#43;
         
 
         
-            <a href="//linkedin.com/in/jonesak" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.com/img/linkedin.svg" alt="linkedin" /></a>
+            <a href="//linkedin.com/in/jonesak" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.github.io/img/linkedin.svg" alt="linkedin" /></a>
         
 
         
 
         
-            <a href="//t.me/aaronkjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.com/img/telegram.svg" alt="telegram" /></a>
+            <a href="//t.me/aaronkjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.github.io/img/telegram.svg" alt="telegram" /></a>
         
 
         
@@ -182,7 +196,7 @@ Tested on DD-WRT version 24&#43;
 
 </div>
 
-                    <div class="initials"><a href="https://aaronkjones.com">ad</a></div>
+                    <div class="initials"><a href="https://aaronkjones.github.io/">ad</a></div>
                 </div>
                 <div class="meta">
                     
@@ -279,12 +293,12 @@ ssh $ROUTER_USER@$ROUTER_ADDRESS -p $ROUTER_PORT &quot;openvpn --config /tmp/ope
 
                 <br>
                 
-                <p class="back-to-posts"><a href="https://aaronkjones.com/blog">Back to posts</a></p>
+                <p class="back-to-posts"><a href="https://aaronkjones.github.io/blog">Back to posts</a></p>
             </div>
             <br>
             <div class="disqus">
                 <div id="disqus_thread"></div>
-<script type="application/javascript">
+<script>
     var disqus_config = function () {
     
     
@@ -296,7 +310,7 @@ ssh $ROUTER_USER@$ROUTER_ADDRESS -p $ROUTER_PORT &quot;openvpn --config /tmp/ope
             return;
         }
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "aaron-jones" + '.disqus.com/embed.js';
+        s.src = '//' + "aaronkjones" + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
@@ -311,16 +325,12 @@ ssh $ROUTER_USER@$ROUTER_ADDRESS -p $ROUTER_PORT &quot;openvpn --config /tmp/ope
 
 
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-114562131-1', 'auto');
-	
-	ga('send', 'pageview');
-}
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-114562131-1', 'auto');
+ga('send', 'pageview');
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
 
 
 
