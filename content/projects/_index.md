@@ -1,8 +1,8 @@
 +++
-date = "2015-08-19T20:29:37-07:00"
-draft = false
 title = "Projects"
+date = "2018-11-05T19:57:28-08:00"
+draft = true
 
 +++
 
-[noobs-term](https://noobs-term.com) - A terminal configuration for noobs.
+[noobs-term](https://noobs-term.com) - A terminal bundle for everyone
