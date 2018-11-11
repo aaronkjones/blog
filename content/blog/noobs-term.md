@@ -4,8 +4,6 @@ date = "2018-11-07T19:32:33-08:00"
 draft = false
 +++
 
-# Noobs Term
-
 ## Introduction
 
 [Noobs Term](https://noobs-term.com) is a terminal bundle that combines a few powerful programs with "sensible" configurations and a beautiful theme.
@@ -34,10 +32,10 @@ The goal of Noobs Term is to have a well-documented, well-supported, and "sensib
 
 Tmux provides many benefits including, persistence (session resumption across disconnects or reboots), terminal multiplexing (window splitting, tabbing), and much more. If you've ever been working on a remote system over SSH and had your connection drop or computer restart, you know the frustration of having to start over. With Tmux, once you reconnect you can reattach to your session and resume working.
 
-![resume after close](../../static/img/21_41_31.gif)
+![resume after close](https://i.imgur.com/YKtoo2l.gif)
 Resuming session after close
 
-![resume after disconnect](../../static/img/19_22_38.gif)
+![resume after disconnect](https://i.imgur.com/OptqyRK.gif)
 Resuming session after disconnect
 
 For a full list of features see [showcase](https://noobs-term.com/#/?id=showcase).
