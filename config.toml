@@ -9,7 +9,7 @@ theme               = "cocoa"
 author              = "Aaron Jones"
 title               = "Aaron Jones"
 pygmentsuseclasses  = true
-disqusshortname     = "aaronkjones" # Comment out to disable Disqus.
+disqusshortname     = "aaron-jones" # Comment out to disable Disqus.
 pluralizelisttitles = false
 googleAnalytics     = "UA-114562131-1"
 
