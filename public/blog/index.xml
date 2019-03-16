@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Noobs-Term</title>
+      <link>https://aaronkjones.github.io/blog/noobs-term/</link>
+      <pubDate>Wed, 07 Nov 2018 19:32:33 -0800</pubDate>
+      
+      <guid>https://aaronkjones.github.io/blog/noobs-term/</guid>
+      <description>Introduction Noobs Term is a terminal bundle that combines a few powerful programs with &amp;ldquo;sensible&amp;rdquo; configurations and a beautiful theme.
+I made Noobs Term to give people a foundation from which they can begin working with Zsh and Tmux without being overwhelmed with many customizations and options up front. When I first started using Zsh and Tmux, I found many configurations that offered some customization that I liked and some I either didn&amp;rsquo;t like or didn&amp;rsquo;t understand.</description>
+    </item>
+    
+    <item>
       <title>Vpn Server Select</title>
       <link>https://aaronkjones.github.io/blog/vpn-server-select/</link>
       <pubDate>Sat, 10 Feb 2018 17:58:51 -0700</pubDate>
