@@ -42,7 +42,7 @@ Firstly, we will need to configure HA to enable Z-Wave devices. Configuration of
 
 To enable Z-Wave add:
 
-```
+```yaml
 zwave:
   usb_path: /dev/ttyACM0
   device_config: !include zwave_device_config.yaml
