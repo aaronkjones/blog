@@ -104,7 +104,7 @@ You can also edit the `/home/homeassistant/.homeassistant/automations.yaml` file
 
 Here is an example.
 
-```
+```yaml
 DO NOT USE THIS EXACTLY, YOUR SENSOR ENTITY_ID WILL DIFFER
 
 - id: '1552497003983'
