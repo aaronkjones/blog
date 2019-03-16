@@ -1,22 +1,22 @@
 +++
 title = "Home Assistant Security System"
-date = "2019-03-13T18:30:40-07:00"
-draft = true
+date = "2019-03-16T18:30:40-07:00"
+draft = false
 
 +++
 
 ## Introduction
 
-This is a high level guide that will get you up and running with Home Assistant as a basic door, window, and garage door security system.
+This is a high-level guide that will get you started out with Home Assistant as a basic security system.
 
-### Topics Covered
+### Overview
 
 - Installing Home Assistant
 - Configuring Z-Wave
 - Adding Z-Wave Sensors
 - Configuring Notifications
-- Creating a Notification
-- Test Notification
+- Creating a Notification Automation
+- Testing Notification Automation
 
 ## Materials Used
 
@@ -31,9 +31,9 @@ Total cost: $320
 
 To install HA, see the [Getting Started](https://www.home-assistant.io/getting-started/) guide. 
 
-Also, take a look at the [alternative installation methods](https://www.home-assistant.io/docs/installation/) of installing HA. 
+Also, take a look at the [alternative installation methods](https://www.home-assistant.io/docs/installation/). 
 
-Personally I chose Hassbian because I wanted a more traditional Linux environment to work in. Hass.io makes installation very simple.
+Personally, I chose Hassbian because I wanted a more traditional Linux environment to work in. Hass.io makes installation very simple.
 
 ## Configuring Z-Wave
 
@@ -54,7 +54,7 @@ Once you add a component you must restart HA to load it.
 
 `sudo systemctl restart home-assistant@homeassistant.service`
 
-Once HA has restarted you should see "Z-Wave" under Configuration.
+After HA has restarted, you should see "Z-Wave" in the configuration settings.
 
 > If you don't see Z-Wave under Configuration see [My component does not show up](https://www.home-assistant.io/docs/configuration/troubleshooting/#my-component-does-not-show-up) for troubleshooting.
 
@@ -62,34 +62,52 @@ Once HA has restarted you should see "Z-Wave" under Configuration.
 
 [Adding devices documentation](https://www.home-assistant.io/docs/z-wave/adding/)
 
-The basic workflow goes like this:
+The basic workflow is:
 
-1. Go to Z-Wave in Home Assistant
-2. With the plastic tab still inserted in the sensor or the battery removed, click the `Add Node` button
-3. Bring the device close to the Raspberry Pi/Z-Wave USB Antenna
-4. Pull the plastic tab on the sensor to put it in inclusion mode.
-4. Install the sensor on a door/window
-5. Click `heal network` in the Z-Wave configuration panel
+- Go to Z-Wave configuration in Home Assistant
+- With the plastic tab still inserted in the sensor, or the battery removed, click the `Add Node` button
+- Bring the device close to the Z-Wave USB Antenna
+- Pull the plastic tab on the sensor to put it in inclusion mode.
+- Install the sensor on a door/window
+- Click `Heal Network` in the Z-Wave configuration
 
-Your device should now be visible in HA
+> Full user guide [here](https://6tlur2di0ct3xw8lx1hkhknd-wpengine.netdna-ssl.com/wp-content/uploads/DW-Zwave-Manual-R1-01.pdf)
+
+Your device should now be visible in HA.
 
 ## Configuring Notifications
 
-There are MANY [notification](https://www.home-assistant.io/components/#search/notification) components available in HA. Personally, I am only using the [iOS notification](https://www.home-assistant.io/docs/ecosystem/ios/)
+There are many [notification](https://www.home-assistant.io/components/#search/notification) components available in HA. Personally, I am using the [iOS notification](https://www.home-assistant.io/docs/ecosystem/ios/) and [SMTP](https://www.home-assistant.io/components/notify.smtp/).
 
-To enable a notification component, add it to the configuration file (`/home/homeassistant/.homeassistant/configuration.yaml).
+To enable a notification component, add it to the configuration file (`/home/homeassistant/.homeassistant/configuration.yaml`).
 
 For example, to enable iOS notifications, simply add:
 
 `ios:`
 
-## Creating a Notification
+## Creating a Notification Automation
 
-You can get creative on notification automations, but starting out I wanted to be notified if any sensor was tripped. To do so, we will need to create an automation. Automations are easily configured in the HA configuration panel. You can also edit the `/home/homeassistant/.homeassistant/automations.yaml` file directly.
+You can get creative on notification automations, but starting out I wanted to be notified if any sensor was tripped. To do so, we will need to create an automation.
 
-I created an automation that notifies my phone when any sensor is opened (state changed from off to on).
+### Through the Web UI
+
+The simplest way to create an automation is to go to the `Automations` section of the configuration and select each sensor under trigger, set their state from off to on. 
+
+![](https://i.imgur.com/3BQhrX5.png)
+
+For action select `notifiy.<your device>` and insert a JSON formatted payload.
+
+![](https://i.imgur.com/f3Ne1J7.png)
+
+### From the CLI
+
+You can also edit the `/home/homeassistant/.homeassistant/automations.yaml` file directly.
+
+Here is an example.
 
 ```
+DO NOT USE THIS EXACTLY, YOUR SENSOR ENTITY_ID WILL DIFFER
+
 - id: '1552497003983'
   alias: Door/Window Opened
   trigger:
@@ -97,26 +115,9 @@ I created an automation that notifies my phone when any sensor is opened (state 
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: binary_sensor.ecolink_door_window_sensor_sensor_2
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: binary_sensor.ecolink_door_window_sensor_sensor_3
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: binary_sensor.ecolink_door_window_sensor_sensor_4
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: binary_sensor.ecolink_door_window_sensor_sensor_5
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: binary_sensor.ecolink_door_window_sensor_sensor_6
-    from: 'off'
-    platform: state
-    to: 'on'
+ ...
+
+
   - entity_id: binary_sensor.ecolink_garage_door_tilt_sensor_sensor
     from: 'off'
     platform: state
@@ -129,15 +130,17 @@ I created an automation that notifies my phone when any sensor is opened (state 
     service: notify.ios_chosin
 ```
 
-Alternatively, you can go to the `Automations` section of the configuration and select each sensor under trigger, set their state from off to on. For action select `notifiy.<your device>` and insert a JSON formatted payload.
+## Testing Notification Automation
 
-## Test Notification
+In order to ensure the alert will function properly, we can invoke a test scenario. 
 
-In order to make sure the alert will function properly, we can invoke a test scenario. To do so, go to the `Services` configuration of HA. 
+To do so, go to the `Services` configuration of HA. 
 
 ![Services](https://i.imgur.com/8RD5NXE.png)
 
-Once there, in the Service field start typing `notify` and you will see the different notification options. If you don't see any, then the notifiy component did not load correctly (did you restart HA after loading it?).
+Once there, in the Service field start typing `notify` and you will see the different notification options.
+
+> If you don't see any, then the notifiy component did not load correctly (did you restart HA after loading it?).
 
 In the `Service Data` field, enter:
 
@@ -148,7 +151,11 @@ In the `Service Data` field, enter:
 }
 ```
 
-When you press `Call Service` you should receive a notification on your iPhone or however you configured to be notified.
+You should have something like this:
+
+![](https://i.imgur.com/RxLb7A9.png)
+
+When you press `Call Service`, you should receive a notification on your iPhone or however you configured to be notified.
 
 Now in order to make sure the automation tigger will notify you, we can do another test. 
 
@@ -156,9 +163,26 @@ Now in order to make sure the automation tigger will notify you, we can do anoth
 
 ![States](https://i.imgur.com/oP0CbUw.png)
 
-- Select a sensor to use for testing
-- Set state to off
+Select a sensor to use for testing and set state to off.
 
 Once you click `Set State`, the automation should trigger, and you should receive a notification
 
 ![](https://i.imgur.com/aArax1Bl.jpg)
+
+Once you've finished testing and are comfortable with the automation triggering successfully, you may want to edit the automation and add a condition that only triggers an alert when you are away. 
+
+![](https://i.imgur.com/I9GJoh5.png)
+
+Read more about device trackers [here](https://www.home-assistant.io/components/device_tracker/)
+
+## Conclusion
+
+You should now have a basic home security system. This, coupled with some motion detecting cameras (I use Amcrest UltraHD 2K's with Blue Iris software), can be a cost-effective home secruity solution.
+
+To take this further, you could do like I did and add a dashboard display with sensor status and a pinpad to enable/disable the alarm.
+
+![](https://i.imgur.com/iABCVUX.jpg)
+
+I may make a part 2 with steps to replicate that.
+
+Need help? Hit me up on twitter or email.
