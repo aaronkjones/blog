@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://aaronkjones.github.io/blog/home-assistant-security-system/</loc>
+    <lastmod>2019-03-15T18:30:40-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://aaronkjones.github.io/blog/noobs-term/</loc>
     <lastmod>2018-11-07T19:32:33-08:00</lastmod>
   </url>
@@ -34,7 +39,7 @@
   
   <url>
     <loc>https://aaronkjones.github.io/</loc>
-    <lastmod>2018-11-07T19:32:33-08:00</lastmod>
+    <lastmod>2019-03-15T18:30:40-07:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Aaron Jones">
+<meta name="description" content="Introduction This is a high-level guide that will get you started out with Home Assistant as a basic security system.
+Overview  Installing Home Assistant Configuring Z-Wave Adding Z-Wave Sensors Configuring Notifications Creating a Notification Automation Testing Notification Automation  Materials Used  Raspberry Pi 3 B&#43; $40 GoControl HUSBZB-1 Z-Wave USB Antenna $40 Ecolink Z-Wave Door/Window Sensor x 6 $35/ea Ecolink Z-Wave Garage Door Sensor $30  Total cost: $320">
+
+<meta property="og:title" content="Home Assistant Security System" />
+<meta property="og:description" content="Introduction This is a high-level guide that will get you started out with Home Assistant as a basic security system.
+Overview  Installing Home Assistant Configuring Z-Wave Adding Z-Wave Sensors Configuring Notifications Creating a Notification Automation Testing Notification Automation  Materials Used  Raspberry Pi 3 B&#43; $40 GoControl HUSBZB-1 Z-Wave USB Antenna $40 Ecolink Z-Wave Door/Window Sensor x 6 $35/ea Ecolink Z-Wave Garage Door Sensor $30  Total cost: $320" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aaronkjones.github.io/blog/home-assistant-security-system/" /><meta property="article:published_time" content="2019-03-15T18:30:40-07:00"/>
+<meta property="article:modified_time" content="2019-03-15T18:30:40-07:00"/>
+
+<title>
+
+
+     Home Assistant Security System 
+
+</title>
+<link rel="canonical" href="https://aaronkjones.github.io/blog/home-assistant-security-system/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/darcula.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://aaronkjones.github.io/css/reset.css?t=2019-03-16%2008%3a23%3a56.92239%20%2b0100%20CET%20m%3d%2b0.332370270">
+    <link rel="stylesheet" href="https://aaronkjones.github.io/css/pygments.css?t=2019-03-16%2008%3a23%3a56.92239%20%2b0100%20CET%20m%3d%2b0.332370270">
+    <link rel="stylesheet" href="https://aaronkjones.github.io/css/main.css?t=2019-03-16%2008%3a23%3a56.92239%20%2b0100%20CET%20m%3d%2b0.332370270">
+    
+        <link rel="stylesheet" href="https://aaronkjones.github.io/css/override.css?t=2019-03-16%2008%3a23%3a56.92239%20%2b0100%20CET%20m%3d%2b0.332370270">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://aaronkjones.github.io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                
+                
+                <a href="https://aaronkjones.github.io/"><img class="avatar" src="https://aaronkjones.github.io/img/profile.png" srcset="https://aaronkjones.github.io/img/profile.png 1x,https://aaronkjones.github.io/img/profile-2x.png 2x,https://aaronkjones.github.io/img/profile-3x.png 3x,https://aaronkjones.github.io/img/profile-4x.png 4x"></a>
+            
+            <a href="https://aaronkjones.github.io/"><div class="name">Aaron Jones</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://aaronkjones.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://aaronkjones.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-projects"><a href="https://aaronkjones.github.io/projects/"><span>Projects</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/aaronkjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+            <a href="//twitter.com/akjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.github.io/img/twitter.svg" alt="twitter" /></a>
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/jonesak" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+            <a href="//t.me/aaronkjones" target="_blank" rel="noopener"><img class="icon" src="https://aaronkjones.github.io/img/telegram.svg" alt="telegram" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Home Assistant Security System
+
+</div>
+
+                    <div class="initials"><a href="https://aaronkjones.github.io/">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Fri Mar 15 2019 18:30:40 -0700'>Mar 15, 2019</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>4 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This is a high-level guide that will get you started out with Home Assistant as a basic security system.</p>
+
+<h3 id="overview">Overview</h3>
+
+<ul>
+<li>Installing Home Assistant</li>
+<li>Configuring Z-Wave</li>
+<li>Adding Z-Wave Sensors</li>
+<li>Configuring Notifications</li>
+<li>Creating a Notification Automation</li>
+<li>Testing Notification Automation</li>
+</ul>
+
+<h2 id="materials-used">Materials Used</h2>
+
+<ul>
+<li><a href="https://www.amazon.com/ELEMENT-Element14-Raspberry-Pi-Motherboard/dp/B07BDR5PDW/ref=sr_1_4?keywords=raspberry+pi&amp;qid=1552499073&amp;s=gateway&amp;sr=8-4">Raspberry Pi 3 B+</a> $40</li>
+<li><a href="https://www.amazon.com/GoControl-CECOMINOD016164-HUSBZB-1-USB-Hub/dp/B01GJ826F8/ref=sr_1_5?keywords=z-wave+usb&amp;qid=1552499004&amp;s=gateway&amp;sr=8-5">GoControl HUSBZB-1 Z-Wave USB Antenna</a> $40</li>
+<li><a href="https://www.amazon.com/Z-Wave-Plated-Reliability-Garage-TILT-ZWAVE2-5-ECO/dp/B01MRZB0NT/ref=sr_1_fkmrnull_3?keywords=ecolink+garage+door+tilt&amp;qid=1552499121&amp;s=gateway&amp;sr=8-3-fkmrnull">Ecolink Z-Wave Door/Window Sensor</a> x 6 $35/ea</li>
+<li><a href="https://www.amazon.com/Z-Wave-Plated-Reliability-Garage-TILT-ZWAVE2-5-ECO/dp/B01MRZB0NT/ref=pd_lpo_vtph_60_bs_lp_t_1?_encoding=UTF8&amp;psc=1&amp;refRID=SYE35K9HVQ98S8FGM56F">Ecolink Z-Wave Garage Door Sensor</a> $30</li>
+</ul>
+
+<p>Total cost: $320</p>
+
+<h2 id="installing-home-assistant">Installing Home Assistant</h2>
+
+<p>To install HA, see the <a href="https://www.home-assistant.io/getting-started/">Getting Started</a> guide.</p>
+
+<p>Also, take a look at the <a href="https://www.home-assistant.io/docs/installation/">alternative installation methods</a>.</p>
+
+<p>Personally, I chose Hassbian because I wanted a more traditional Linux environment to work in. Hass.io makes installation very simple.</p>
+
+<h2 id="configuring-z-wave">Configuring Z-Wave</h2>
+
+<p><a href="https://www.home-assistant.io/docs/z-wave/">HA Z-Wave Documentation</a></p>
+
+<p>Firstly, we will need to configure HA to enable Z-Wave devices. Configuration of HA is handled in the file, <code>/home/homeassistant/.homeassistant/configuration.yaml</code> on the Raspberry Pi. Components are enabled by including them in this file.</p>
+
+<p>To enable Z-Wave add:</p>
+
+<pre><code>zwave:
+  usb_path: /dev/ttyACM0
+  device_config: !include zwave_device_config.yaml
+</code></pre>
+
+<blockquote>
+<p>If /dev/ttyACM0 is not the path to your Z-Wave USB device, see <a href="https://www.home-assistant.io/docs/z-wave/installation/#platform-specific-instructions">Platform specific instructions</a></p>
+</blockquote>
+
+<p>Once you add a component you must restart HA to load it.</p>
+
+<p><code>sudo systemctl restart home-assistant@homeassistant.service</code></p>
+
+<p>After HA has restarted, you should see &ldquo;Z-Wave&rdquo; in the configuration settings.</p>
+
+<blockquote>
+<p>If you don&rsquo;t see Z-Wave under Configuration see <a href="https://www.home-assistant.io/docs/configuration/troubleshooting/#my-component-does-not-show-up">My component does not show up</a> for troubleshooting.</p>
+</blockquote>
+
+<h2 id="adding-z-wave-sensors">Adding Z-Wave Sensors</h2>
+
+<p><a href="https://www.home-assistant.io/docs/z-wave/adding/">Adding devices documentation</a></p>
+
+<p>The basic workflow is:</p>
+
+<ul>
+<li>Go to Z-Wave configuration in Home Assistant</li>
+<li>With the plastic tab still inserted in the sensor, or the battery removed, click the <code>Add Node</code> button</li>
+<li>Bring the device close to the Z-Wave USB Antenna</li>
+<li>Pull the plastic tab on the sensor to put it in inclusion mode.</li>
+<li>Install the sensor on a door/window</li>
+<li>Click <code>Heal Network</code> in the Z-Wave configuration</li>
+</ul>
+
+<blockquote>
+<p>Full user guide <a href="https://6tlur2di0ct3xw8lx1hkhknd-wpengine.netdna-ssl.com/wp-content/uploads/DW-Zwave-Manual-R1-01.pdf">here</a></p>
+</blockquote>
+
+<p>Your device should now be visible in HA.</p>
+
+<h2 id="configuring-notifications">Configuring Notifications</h2>
+
+<p>There are many <a href="https://www.home-assistant.io/components/#search/notification">notification</a> components available in HA. Personally, I am using the <a href="https://www.home-assistant.io/docs/ecosystem/ios/">iOS notification</a> and <a href="https://www.home-assistant.io/components/notify.smtp/">SMTP</a>.</p>
+
+<p>To enable a notification component, add it to the configuration file (<code>/home/homeassistant/.homeassistant/configuration.yaml</code>).</p>
+
+<p>For example, to enable iOS notifications, simply add:</p>
+
+<p><code>ios:</code></p>
+
+<h2 id="creating-a-notification-automation">Creating a Notification Automation</h2>
+
+<p>You can get creative on notification automations, but starting out I wanted to be notified if any sensor was tripped. To do so, we will need to create an automation.</p>
+
+<h3 id="through-the-web-ui">Through the Web UI</h3>
+
+<p>The simplest way to create an automation is to go to the <code>Automations</code> section of the configuration and select each sensor under trigger, set their state from off to on.</p>
+
+<p><img src="https://i.imgur.com/3BQhrX5.png" alt="" /></p>
+
+<p>For action select <code>notifiy.&lt;your device&gt;</code> and insert a JSON formatted payload.</p>
+
+<p><img src="https://i.imgur.com/f3Ne1J7.png" alt="" /></p>
+
+<h3 id="from-the-cli">From the CLI</h3>
+
+<p>You can also edit the <code>/home/homeassistant/.homeassistant/automations.yaml</code> file directly.</p>
+
+<p>Here is an example.</p>
+
+<pre><code class="language-yaml">DO NOT USE THIS EXACTLY, YOUR SENSOR ENTITY_ID WILL DIFFER
+
+- id: '1552497003983'
+  alias: Door/Window Opened
+  trigger:
+  - entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+ ...
+
+
+  - entity_id: binary_sensor.ecolink_garage_door_tilt_sensor_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: A door or window was opened
+      title: Alert
+    service: notify.ios_chosin
+</code></pre>
+
+<h2 id="testing-notification-automation">Testing Notification Automation</h2>
+
+<p>In order to ensure the alert will function properly, we can invoke a test scenario.</p>
+
+<p>To do so, go to the <code>Services</code> configuration of HA.</p>
+
+<p><img src="https://i.imgur.com/8RD5NXE.png" alt="Services" /></p>
+
+<p>Once there, in the Service field start typing <code>notify</code> and you will see the different notification options.</p>
+
+<blockquote>
+<p>If you don&rsquo;t see any, then the notifiy component did not load correctly (did you restart HA after loading it?).</p>
+</blockquote>
+
+<p>In the <code>Service Data</code> field, enter:</p>
+
+<pre><code>{
+&quot;title&quot;:&quot;Test&quot;,
+&quot;message&quot;:&quot;Test message&quot;
+}
+</code></pre>
+
+<p>You should have something like this:</p>
+
+<p><img src="https://i.imgur.com/RxLb7A9.png" alt="" /></p>
+
+<p>When you press <code>Call Service</code>, you should receive a notification on your iPhone or however you configured to be notified.</p>
+
+<p>Now in order to make sure the automation tigger will notify you, we can do another test.</p>
+
+<ul>
+<li>Go to the <code>States</code> section.</li>
+</ul>
+
+<p><img src="https://i.imgur.com/oP0CbUw.png" alt="States" /></p>
+
+<p>Select a sensor to use for testing and set state to off.</p>
+
+<p>Once you click <code>Set State</code>, the automation should trigger, and you should receive a notification</p>
+
+<p><img src="https://i.imgur.com/aArax1Bl.jpg" alt="" /></p>
+
+<p>Once you&rsquo;ve finished testing and are comfortable with the automation triggering successfully, you may want to edit the automation and add a condition that only triggers an alert when you are away.</p>
+
+<p><img src="https://i.imgur.com/I9GJoh5.png" alt="" /></p>
+
+<p>Read more about device trackers <a href="https://www.home-assistant.io/components/device_tracker/">here</a></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>You should now have a basic home security system. This, coupled with some motion detecting cameras (I use Amcrest UltraHD 2K&rsquo;s with Blue Iris software), can be a cost-effective home secruity solution.</p>
+
+<p>To take this further, you could do like I did and add a dashboard display with sensor status and a pinpad to enable/disable the alarm.</p>
+
+<p><img src="https://i.imgur.com/iABCVUX.jpg" alt="" /></p>
+
+<p>I may make a part 2 with steps to replicate that.</p>
+
+<p>Need help? Hit me up on twitter or email.</p>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://aaronkjones.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aaron-jones" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-114562131-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
