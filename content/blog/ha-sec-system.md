@@ -21,7 +21,7 @@ This is a high-level guide that will get you started out with Home Assistant as 
 
 - [Raspberry Pi 3 B+](https://www.amazon.com/ELEMENT-Element14-Raspberry-Pi-Motherboard/dp/B07BDR5PDW/ref=sr_1_4?keywords=raspberry+pi&qid=1552499073&s=gateway&sr=8-4) $40
 - [GoControl HUSBZB-1 Z-Wave USB Antenna](https://www.amazon.com/GoControl-CECOMINOD016164-HUSBZB-1-USB-Hub/dp/B01GJ826F8/ref=sr_1_5?keywords=z-wave+usb&qid=1552499004&s=gateway&sr=8-5) $40
-- [Ecolink Z-Wave Door/Window Sensor](https://www.amazon.com/Z-Wave-Plated-Reliability-Garage-TILT-ZWAVE2-5-ECO/dp/B01MRZB0NT/ref=sr_1_fkmrnull_3?keywords=ecolink+garage+door+tilt&qid=1552499121&s=gateway&sr=8-3-fkmrnull) x 6 $35/ea
+- [Ecolink Z-Wave Door/Window Sensor](https://www.amazon.com/Z-Wave-Magnets-Window-Sensor-DWZWAVE2-5-ECO/dp/B01N5HB4U5/ref=sr_1_9?keywords=ecolink&qid=1552895648&s=electronics&sr=1-9) x 6 $35/ea
 - [Ecolink Z-Wave Garage Door Sensor](https://www.amazon.com/Z-Wave-Plated-Reliability-Garage-TILT-ZWAVE2-5-ECO/dp/B01MRZB0NT/ref=pd_lpo_vtph_60_bs_lp_t_1?_encoding=UTF8&psc=1&refRID=SYE35K9HVQ98S8FGM56F) $30
 
 Total cost: $320
