@@ -156,7 +156,7 @@ You should have something like this:
 
 When you press `Call Service`, you should receive a notification on your iPhone or however you configured to be notified.
 
-Now in order to make sure the automation tigger will notify you, we can do another test. 
+Now in order to make sure the automation trigger will notify you, we can do another test. 
 
 - Go to the `States` section.
 
@@ -176,7 +176,7 @@ Read more about device trackers [here](https://www.home-assistant.io/components/
 
 ## Conclusion
 
-You should now have a basic home security system. This, coupled with some motion detecting cameras (I use Amcrest UltraHD 2K's with Blue Iris software), can be a cost-effective home secruity solution.
+You should now have a basic home security system. This, coupled with some motion detecting cameras (I use Amcrest UltraHD 2K's with Blue Iris software), can be a cost-effective home security solution.
 
 To take this further, you could do like I did and add a dashboard display with sensor status and a pinpad to enable/disable the alarm.
 
