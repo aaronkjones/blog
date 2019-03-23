@@ -5,4 +5,4 @@ draft = false
 
 +++
 
-[noobs-term](https://noobs-term.com) - A terminal bundle for everyone
+[noobs-term](https://noobs-term.com): A terminal bundle for everyone
