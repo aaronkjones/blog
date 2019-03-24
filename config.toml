@@ -24,7 +24,7 @@ googleAnalytics = "UA-114562131-1"
     info = "DevOps Engineer"
     avatarurl = "img/profile.png"
     footercontent = ""
-    # favicon_32 = "/img/favicon-32x32.png"
+    favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
 
     dateformat = "January 2, 2006"
