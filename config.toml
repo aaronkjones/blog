@@ -1,5 +1,5 @@
 baseurl = "https://aaronkjones.com"
-title = "aaron jones"
+title = "Aaron Jones"
 
 theme = "hugo-coder"
 
@@ -26,7 +26,6 @@ googleAnalytics = "UA-114562131-1"
     footercontent = ""
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
-
     dateformat = "January 2, 2006"
 
     hideCredits = true
@@ -44,7 +43,7 @@ googleAnalytics = "UA-114562131-1"
     maxSeeAlsoItems = 5
 
     # Custom CSS
-    custom_css = []
+    custom_css = [""]
 
 [taxonomies]
   series = "series"
