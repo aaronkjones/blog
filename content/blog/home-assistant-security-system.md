@@ -8,8 +8,9 @@ draft = false
 
 This is a high-level guide that will get you started out with Home Assistant as a basic security system.
 
-### Overview
+## Overview
 
+- Materials Used
 - Installing Home Assistant
 - Configuring Z-Wave
 - Adding Z-Wave Sensors
