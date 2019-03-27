@@ -20,13 +20,13 @@ This is a high-level guide that will get you started out with Home Assistant as 
 
 ## Materials Used
 
-- [Raspberry Pi 3 B+](https://amzn.to/2FAVQe7) - \$39.95
-- [GoControl HUSBZB-1 Z-Wave USB Antenna](https://amzn.to/2Yrf79i) \$40
-- [Ecolink Z-Wave Door/Window Sensor](https://amzn.to/2UVByB3) x 6 \$35/ea
-- [Ecolink Z-Wave Garage Door Sensor](https://amzn.to/2UimSiE) \$30
-- [SanDisk 32GB microSD Card](https://amzn.to/2HGCKp2) - \$7.30
-111.84 
-Total cost: ~\$320
+- [Raspberry Pi 3 B+](https://amzn.to/2FAVQe7) - 39.95
+- [GoControl HUSBZB-1 Z-Wave USB Antenna](https://amzn.to/2Yrf79i) 40
+- [Ecolink Z-Wave Door/Window Sensor](https://amzn.to/2UVByB3) x 6 35/ea
+- [Ecolink Z-Wave Garage Door Sensor](https://amzn.to/2UimSiE) 30
+- [SanDisk 32GB microSD Card](https://amzn.to/2HGCKp2) - 7.30
+
+Total cost: ~320
 
 ## Installing Home Assistant
 
