@@ -4,6 +4,7 @@ title = "Home Assistant Security System (Part 2)"
 description = "Part two of the Home Assistant Security System guide"
 images = []
 series = ["Home Assistant", "Raspberry Pi"]
+draft = true
 +++
 
 ## Introduction
