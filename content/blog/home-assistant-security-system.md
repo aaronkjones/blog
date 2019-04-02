@@ -1,12 +1,12 @@
 +++
-title = "Home Assistant Security System"
+title = "Home Assistant Security System (Part 1)"
 date = "2019-03-15T18:30:40-07:00"
 draft = false
 +++
 
 ## Introduction
 
-This is a high-level guide that will get you started out with Home Assistant as a basic security system.
+This is part one of a high-level guide that will get you started out with Home Assistant as a basic security system. In [part two](https://aaronkjones.com/blog/home-assistant-security-system-part-2), I show how to add a dashboard display to your system.
 
 ## Overview
 
@@ -49,6 +49,7 @@ zwave:
   usb_path: /dev/ttyACM0
   device_config: !include zwave_device_config.yaml
 ``` 
+
 > If /dev/ttyACM0 is not the path to your Z-Wave USB device, see [Platform specific instructions](https://www.home-assistant.io/docs/z-wave/installation/#platform-specific-instructions)
 
 Once you add a component you must restart HA to load it.
