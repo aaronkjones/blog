@@ -1,5 +1,5 @@
 +++
-date = "2019-03-25"
+date = "2018-11-07"
 title = "Noobs Term"
 description = "Introduction to Noobs Term"
 images = []
