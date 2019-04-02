@@ -1,8 +1,9 @@
 +++
-title = "Vpn Server Select"
-date = "2018-02-10T17:58:51-07:00"
-draft = false
-
+date = "2019-02-10"
+title = "VPN Server Select"
+description = "A guide on how to set a VPN profile on a DD-WRT router"
+images = []
+series = ["Networking", "DD-WRT", "VPN"]
 +++
 
 This post explains how to set a VPN connection on a home router. I am using a Netgear R6300V2 with DD-WRT.

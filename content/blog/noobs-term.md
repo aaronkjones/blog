@@ -1,7 +1,9 @@
 +++
-title = "Noobs-Term"
-date = "2018-11-07T19:32:33-08:00"
-draft = false
+date = "2019-03-25"
+title = "Noobs Term"
+description = "Introduction to Noobs Term"
+images = []
+series = ["terminal", "zsh", "tmux", "vim"]
 +++
 
 ## Introduction

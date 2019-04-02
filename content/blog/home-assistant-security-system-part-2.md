@@ -1,8 +1,10 @@
----
-title: "Home Assistant Security System (Part 2)"
-date: 2019-03-25T12:48:33+01:00
-draft: false
----
++++
+date = "2019-03-25"
+title = "Home Assistant Security System (Part 2)"
+description = "Part two of the Home Assistant Security System guide"
+images = []
+series = ["Home Assistant", "Raspberry Pi"]
++++
 
 ## Introduction
 

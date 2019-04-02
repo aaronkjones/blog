@@ -1,7 +1,9 @@
 +++
+date = "2019-03-15"
 title = "Home Assistant Security System (Part 1)"
-date = "2019-03-15T18:30:40-07:00"
-draft = false
+description = "Part one of the Home Assistant Security System guide"
+images = []
+series = ["Home Assistant", "Raspberry Pi"]
 +++
 
 ## Introduction
