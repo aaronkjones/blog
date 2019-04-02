@@ -1,11 +1,9 @@
-+++
-date = "2019-03-25"
-title = "Home Assistant Security System (Part 2)"
-description = "Part two of the Home Assistant Security System guide"
-images = []
-series = ["Home Assistant", "Raspberry Pi"]
-draft = true
-+++
+---
+author: Aaron Jones
+date: 2019-03-25
+title: Home Assistant Security System (Part 2)
+best: true
+---
 
 ## Introduction
 

@@ -1,133 +1,56 @@
 baseurl = "https://aaronkjones.com"
 title = "Aaron Jones"
-
-theme = "hugo-coder"
-
-
-languagecode = "en"
-defaultcontentlanguage = "en"
-
-paginate = 20
+theme = "cocoa-eh"
+builddrafts = true
 canonifyurls = true
-
-pygmentsstyle = "b2"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-
-disqusShortname = "aaron-jones"
+contentdir = "content"
+languageCode = "en-US"
+layoutdir = "layouts"
+publishdir = "public"
+author = "Aaron Jones"
+disqusshortname = ""
+pluralizelisttitles = false
 googleAnalytics = "UA-114562131-1"
 
+[permalinks]
+blog = "blog/:slug/"
+
 [params]
-    author = "Aaron Jones"
-    description = "Aaron Jones"
-    keywords = "blog,developer,devops,personal"
-    info = "DevOps Engineer"
-    avatarurl = "img/profile.png"
-    footercontent = ""
-    favicon_32 = "/img/favicon-32x32.png"
-    favicon_16 = "/img/favicon-16x16.png"
-    dateformat = "January 2, 2006"
+dateform = "Jan 2, 2006"
+dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+description = "Aaron Jones"
+copyright = "Copyright © 2019"
+# copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
+logofile = ""
+faviconfile = "img/favicon-32x32.png"
+highlightjs = true
+progressively = true
+share = true
+# Share to googleplus, twitter, fb, linkedin by default
+# disable by setting share_on_<social network> = false
+# example: share_on_googleplus = false
+latestpostcount = 5
+github = "aaronkjones"
+email = "aaronkjones@mailbox.org"
+#linkedin = "john-example-aa80ue8è"
+twitter = "jonesak"
+social_banner = "img/banner.png"
+usesmallsummarycard = true
+posts_navigation = true
+# issoHost = "comments.domain.tld:1234"
+commentoHost = "cdn.commento.io"
+# githubRepo = "githubUsername/repositoryName/tree/master"
+small_banner_logo = true
 
-    hideCredits = true
-    hideCopyright = false
-
-    # Git Commit in Footer, uncomment the line below to enable it.
-    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
-
-    rtl = false
-
-    # Use inverted colors
-    inverted = false
-
-    # Series see also post count
-    maxSeeAlsoItems = 5
-
-    # Custom CSS
-    custom_css = [""]
-
-[taxonomies]
-  series = "series"
-
-[[params.social]]
-    name = "Github"
-    icon = "fab fa-github"
-    weight = 1
-    url = "https://github.com/aaronkjones/"
-[[params.social]]
-    name = "E-Mail"
-    icon = "fa fa-envelope"
-    weight = 2
-    url = "mailto:aaronkjones@mailbox.org"
-[[params.social]]
-    name = "Twitter"
-    icon = "fab fa-twitter"
-    weight = 3
-    url = "https://twitter.com/akjones/"
-[[params.social]]
-    name = "Telegram"
-    icon = "fab fa-telegram"
-    weight = 4
-    url = "https://t.me/aaronkjones"
-# [[params.social]]
-#     name = "LinkedIn"
-#     icon = "fab fa-linkedin"
-#     weight = 4
-#     url = "https://www.linkedin.com/in/johndoe/"
-
-[languages]
-    [languages.en]
-        languagename = "English"
-
-        [[languages.en.menu.main]]
-        name = "About"
-        weight = 1
-        url = "/about/"
-
-        [[languages.en.menu.main]]
-        name = "Blog"
-        weight = 2
-        url = "/posts/"
-
-        [[languages.en.menu.main]]
-        name = "Projects"
-        weight = 3
-        url = "/projects/"
-
-        # [[languages.en.menu.main]]
-        # name = "Contact me"
-        # weight = 5
-        # url = "/contact/"
-
-
-    # [languages.pt-br]
-    #     languagename = "Português"
-    #     title = "João Ninguém"
-
-    #     [languages.pt-br.params]
-    #         author = "João Ninguém"
-    #         info = "Full Stack DevOps e Mágico"
-    #         description = "Sítio pessoal de João Ninguém"
-    #         keywords = "blog,desenvolvedor,pessoal"
-    #         footercontent = "Coloque algum texto aqui."
-
-    #     [languages.pt-br.menu]
-
-    #         [[languages.pt-br.menu.main]]
-    #         name = "Sobre"
-    #         weight = 1
-    #         url = "/pt-br/about/"
-
-    #         [[languages.pt-br.menu.main]]
-    #         name = "Blog"
-    #         weight = 2
-    #         url = "/pt-br/posts/"
-
-    #         [[languages.pt-br.menu.main]]
-    #         name = "Projetos"
-    #         weight = 3
-    #         url = "/pt-br/projects/"
-
-    #         [[languages.pt-br.menu.main]]
-    #         name = "Contato"
-    #         weight = 5
-    #         url = "/pt-br/contact/"
+[params.colors]
+identifier = "#527fc1f"
+identifier_dark = "#1a3152"
+trivial = "#6a7a8b"
+foreground = "#181d2a"
+background = "#f9f9f9"
+background_dark = "#282a36"
+code = "#87a5d2"
+type = "#97d28b"
+special = "#ffcb8d"
+value = "#96c2d7"
+statement = "#ff8e91"

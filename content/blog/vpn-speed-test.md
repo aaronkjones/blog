@@ -1,10 +1,9 @@
-+++
-date = "2019-01-13"
-title = "VPN Speed Test"
-description = "A guide on how to find the fastest VPN your provider offers"
-images = []
-series = ["Networking", "VPN"]
-+++
+---
+author: Aaron Jones
+date: 2019-01-13
+title: VPN Speed Test
+best: true
+---
 
 This script will automate selecting the best VPN server from a given list of servers your provider offers.
 

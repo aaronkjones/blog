@@ -1,10 +1,9 @@
-+++
-date = "2018-11-07"
-title = "Noobs Term"
-description = "Introduction to Noobs Term"
-images = []
-series = ["terminal", "zsh", "tmux", "vim"]
-+++
+---
+author: Aaron Jones
+date: 2018-11-07
+title: Noobs Term
+best: true
+---
 
 ## Introduction
 
