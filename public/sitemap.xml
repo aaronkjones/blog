@@ -3,13 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://aaronkjones.com/blog/home-assistant-security-system/</loc>
-    <lastmod>2019-03-15T18:30:40-07:00</lastmod>
+    <loc>https://aaronkjones.com/post/home-assistant-security-system/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://aaronkjones.com/blog/noobs-term/</loc>
-    <lastmod>2018-11-07T19:32:33-08:00</lastmod>
+    <loc>https://aaronkjones.com/post/vpn-server-select/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/post/vpn-speed-test/</loc>
+    <lastmod>2019-01-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/post/noobs-term/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,28 +28,77 @@
   </url>
   
   <url>
-    <loc>https://aaronkjones.com/blog/vpn-server-select/</loc>
-    <lastmod>2018-02-10T17:58:51-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aaronkjones.com/blog/vpn-speed-test/</loc>
-    <lastmod>2018-01-13T18:00:02-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aaronkjones.com/blog/</loc>
-    <lastmod>2015-08-22T06:42:21-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aaronkjones.com/series/</loc>
+    <loc>https://aaronkjones.com/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://aaronkjones.com/</loc>
-    <lastmod>2019-03-15T18:30:40-07:00</lastmod>
+    <loc>https://aaronkjones.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/dd-wrt/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/home-assistant/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/networking/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/post/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/raspberry-pi/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/terminal/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/tmux/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/vpn/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/tags/zsh/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

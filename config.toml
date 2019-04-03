@@ -23,14 +23,8 @@ copyright = "Copyright © 2019"
   url = "/"
 
 [[menu.main]]
-  name = "Works"
-  weight = 20
-  identifier = "works"
-  url = "https://github.com/aaronkjones"
-
-[[menu.main]]
   name = "Tags"
-  weight = 30
+  weight = 50
   identifier = "tags"
   url = "/tags/"
 
@@ -40,7 +34,7 @@ copyright = "Copyright © 2019"
   bg = "images/grey-prism.svg"
   avatar = "img/logo.png"
   seotitle = "Aaron Jones"
-  subtitle = "~ Don't Panic ~"
+  subtitle = ""
   description = "Blog of Aaron Jones"
   paginate = 10
 
@@ -51,4 +45,4 @@ copyright = "Copyright © 2019"
   linkedin = ""
 
   # Overrid theme styles in this file
-  # customStyle = "styles/custom.scss"
+  customStyle = "styles/custom.scss"
