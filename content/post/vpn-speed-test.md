@@ -1,11 +1,13 @@
 ---
-author: Aaron Jones
-date: 2019-01-13
 title: VPN Speed Test
-best: true
+tags: ["VPN", "Networking"]
+date: 2019-01-13
+draft: false
 ---
 
 This script will automate selecting the best VPN server from a given list of servers your provider offers.
+
+<!--more-->
 
 # Requirements
 

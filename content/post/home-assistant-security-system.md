@@ -1,13 +1,13 @@
 ---
-author: Aaron Jones
-date: 2019-03-15
 title: Home Assistant Security System (Part 1)
-best: true
+tags: ["Home Assistant", "Raspberry Pi"]
+date: 2019-03-15
+draft: false
 ---
 
-## Introduction
-
 This is part one of a high-level guide that will get you started out with Home Assistant as a basic security system. In [part two](https://aaronkjones.com/blog/home-assistant-security-system-part-2), I show how to add a dashboard display to your system.
+
+<!--more-->
 
 ## Overview
 

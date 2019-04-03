@@ -1,15 +1,15 @@
 ---
-author: Aaron Jones
-date: 2018-11-07
 title: Noobs Term
-best: true
+tags: ["terminal", "zsh", "tmux"]
+date: 2018-11-07
+draft: false
 ---
-
-## Introduction
 
 [Noobs Term](https://noobs-term.com) is a terminal bundle that combines a few powerful programs with "sensible" configurations and a beautiful theme.
 
 I made Noobs Term to give people a foundation from which they can begin working with Zsh and Tmux without being overwhelmed with many customizations and options up front. When I first started using Zsh and Tmux, I found many configurations that offered some customization that I liked and some I either didn't like or didn't understand.
+
+<!--more-->
 
 Projects like [tmux-sensible](https://github.com/tmux-plugins/tmux-sensible) and [vim-sensible](https://github.com/tpope/vim-sensible) aim to establish default settings that are universally accepted as "sensible". [Noobs Term](noobs-term.com) combines these programs and configurations with [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt), a very featureful, customizable Zsh prompt; and Nord, a beautiful arctic, bluish theme.
 

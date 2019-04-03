@@ -1,56 +1,54 @@
-baseurl = "https://aaronkjones.com"
+baseURL = "https://aaronkjones.com"
+languageCode = "en"
 title = "Aaron Jones"
-theme = "cocoa-eh"
-builddrafts = true
+theme = "hugo-nuo"
+enableRobotsTXT = true
+PygmentsCodeFences = true
 canonifyurls = true
-contentdir = "content"
-languageCode = "en-US"
-layoutdir = "layouts"
-publishdir = "public"
-author = "Aaron Jones"
-disqusshortname = ""
-pluralizelisttitles = false
+
+# Disqus Username
+disqusShortname = "aaron-jones"
+
+# Google Analytics UA number
 googleAnalytics = "UA-114562131-1"
 
-[permalinks]
-blog = "blog/:slug/"
-
-[params]
-dateform = "Jan 2, 2006"
-dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-description = "Aaron Jones"
+# Copyright of your post
 copyright = "Copyright © 2019"
-# copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
-logofile = ""
-faviconfile = "img/favicon-32x32.png"
-highlightjs = true
-progressively = true
-share = true
-# Share to googleplus, twitter, fb, linkedin by default
-# disable by setting share_on_<social network> = false
-# example: share_on_googleplus = false
-latestpostcount = 5
-github = "aaronkjones"
-email = "aaronkjones@mailbox.org"
-#linkedin = "john-example-aa80ue8è"
-twitter = "jonesak"
-social_banner = "img/banner.png"
-usesmallsummarycard = true
-posts_navigation = true
-# issoHost = "comments.domain.tld:1234"
-commentoHost = "cdn.commento.io"
-# githubRepo = "githubUsername/repositoryName/tree/master"
-small_banner_logo = true
 
-[params.colors]
-identifier = "#527fc1f"
-identifier_dark = "#1a3152"
-trivial = "#6a7a8b"
-foreground = "#181d2a"
-background = "#f9f9f9"
-background_dark = "#282a36"
-code = "#87a5d2"
-type = "#97d28b"
-special = "#ffcb8d"
-value = "#96c2d7"
-statement = "#ff8e91"
+# Initial site menu, you can extend menu with content.
+[[menu.main]]
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "Works"
+  weight = 20
+  identifier = "works"
+  url = "https://github.com/aaronkjones"
+
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+
+# Add your own params here
+[params]
+  author = "Aaron Jones"
+  bg = "images/grey-prism.svg"
+  avatar = "img/logo.png"
+  seotitle = "Aaron Jones"
+  subtitle = "~ Don't Panic ~"
+  description = "Blog of Aaron Jones"
+  paginate = 10
+
+  # Choose your social networks
+  email = "aaronkjones@mailbox.org"
+  github = "aaronkjones"
+  twitter = "jonesak"
+  linkedin = ""
+
+  # Overrid theme styles in this file
+  # customStyle = "styles/custom.scss"

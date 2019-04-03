@@ -1,13 +1,15 @@
 ---
-author: Aaron Jones
-date: 2019-02-10
 title: VPN Server Select
-best: true
+tags: ["VPN", "Networking", "DD-WRT"]
+date: 2019-02-10
+draft: false
 ---
 
 This post explains how to set a VPN connection on a home router. I am using a Netgear R6300V2 with DD-WRT.
 
 For DD-WRT, you can check if your router is supported in the Router Database.
+
+<!--more-->
 
 # Enable the CLI
 

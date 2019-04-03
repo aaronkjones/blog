@@ -1,13 +1,13 @@
 ---
-author: Aaron Jones
-date: 2019-03-25
 title: Home Assistant Security System (Part 2)
-best: true
+tags: ["Home Assistant", "Raspberry Pi"]
+date: 2019-03-25
+draft: true
 ---
 
-## Introduction
-
 This is part two of the [Home Assistant Security System](https://aaronkjones.com/blog/home-assistant-security-system) guide. In this part, I show how I configured a dashboard display to complete my HA security system, to give visual feedback and, optionally, be used to manually arm the system. This guide assumes you followed [part one](https://aaronkjones.com/blog/home-assistant-security-system).
+
+<!--more-->
 
 ## Overview
 
@@ -19,6 +19,7 @@ This is part two of the [Home Assistant Security System](https://aaronkjones.com
 
 In my case I wanted to use the same Raspberry Pi for Home Assistant and the display. To do so I decided to use Hassbian. Since Hassbian does not include a GUI, I had to install one. If you decide to follow suit, you will need to do the same. 
 I followed [this guide](https://community.home-assistant.io/t/add-desktop-environment-to-hassbian/33047) in order to get that working.
+
 ## Materials Used
 
 * [Raspberry Pi LCD - 7" Touchscreen](https://amzn.to/2uqyCB1) - 64.95
