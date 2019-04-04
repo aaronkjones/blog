@@ -3,38 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://aaronkjones.com/post/home-assistant-security-system/</loc>
-    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aaronkjones.com/post/vpn-server-select/</loc>
-    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aaronkjones.com/post/vpn-speed-test/</loc>
-    <lastmod>2019-01-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aaronkjones.com/post/noobs-term/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+    <loc>https://aaronkjones.com/about/</loc>
+    <lastmod>2019-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://aaronkjones.com/projects/</loc>
-    <lastmod>2018-11-05T19:57:28-08:00</lastmod>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/blog/home-assistant-security-system/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/blog/vpn-server-select/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/blog/vpn-speed-test/</loc>
+    <lastmod>2019-01-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aaronkjones.com/blog/noobs-term/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://aaronkjones.com/</loc>
-    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aaronkjones.com/about/</loc>
   </url>
   
   <url>

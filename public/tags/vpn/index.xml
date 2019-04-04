@@ -14,10 +14,10 @@
     
     <item>
       <title>VPN Server Select</title>
-      <link>https://aaronkjones.com/post/vpn-server-select/</link>
+      <link>https://aaronkjones.com/blog/vpn-server-select/</link>
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aaronkjones.com/post/vpn-server-select/</guid>
+      <guid>https://aaronkjones.com/blog/vpn-server-select/</guid>
       <description>&lt;p&gt;This post explains how to set a VPN connection on a home router. I am using a Netgear R6300V2 with DD-WRT.&lt;/p&gt;
 
 &lt;p&gt;For DD-WRT, you can check if your router is supported in the Router Database.&lt;/p&gt;</description>
@@ -25,10 +25,10 @@
     
     <item>
       <title>VPN Speed Test</title>
-      <link>https://aaronkjones.com/post/vpn-speed-test/</link>
+      <link>https://aaronkjones.com/blog/vpn-speed-test/</link>
       <pubDate>Sun, 13 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aaronkjones.com/post/vpn-speed-test/</guid>
+      <guid>https://aaronkjones.com/blog/vpn-speed-test/</guid>
       <description>&lt;p&gt;This script will automate selecting the best VPN server from a given list of servers your provider offers.&lt;/p&gt;</description>
     </item>
     

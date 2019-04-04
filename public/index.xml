@@ -7,26 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2019</copyright>
-    <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://aaronkjones.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Home Assistant Security System (Part 1)</title>
-      <link>https://aaronkjones.com/post/home-assistant-security-system/</link>
+      <title>About</title>
+      <link>https://aaronkjones.com/about/</link>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://aaronkjones.com/about/</guid>
+      <description>I am a DevOps Engineer, based out of San Diego, California. I grew up in Tennessee and served in the United States Marine Corps in San Diego. I studied Computer Science and Information Systems at the University of Utah in Salt Lake City, Utah. Since moving back to San Diego, I have worked as a DevOps Engineer at Qualcomm Incorporated. If you would like to connect, feel free to email me.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://aaronkjones.com/projects/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://aaronkjones.com/projects/</guid>
+      <description>noobs-term: A terminal bundle for everyone</description>
+    </item>
+    
+    <item>
+      <title>Home Assistant Security System</title>
+      <link>https://aaronkjones.com/blog/home-assistant-security-system/</link>
       <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aaronkjones.com/post/home-assistant-security-system/</guid>
+      <guid>https://aaronkjones.com/blog/home-assistant-security-system/</guid>
       <description>&lt;p&gt;This is part one of a high-level guide that will get you started out with Home Assistant as a basic security system. In &lt;a href=&#34;https://aaronkjones.com/blog/home-assistant-security-system-part-2&#34;&gt;part two&lt;/a&gt;, I show how to add a dashboard display to your system.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>VPN Server Select</title>
-      <link>https://aaronkjones.com/post/vpn-server-select/</link>
+      <link>https://aaronkjones.com/blog/vpn-server-select/</link>
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aaronkjones.com/post/vpn-server-select/</guid>
+      <guid>https://aaronkjones.com/blog/vpn-server-select/</guid>
       <description>&lt;p&gt;This post explains how to set a VPN connection on a home router. I am using a Netgear R6300V2 with DD-WRT.&lt;/p&gt;
 
 &lt;p&gt;For DD-WRT, you can check if your router is supported in the Router Database.&lt;/p&gt;</description>
@@ -34,40 +52,22 @@
     
     <item>
       <title>VPN Speed Test</title>
-      <link>https://aaronkjones.com/post/vpn-speed-test/</link>
+      <link>https://aaronkjones.com/blog/vpn-speed-test/</link>
       <pubDate>Sun, 13 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aaronkjones.com/post/vpn-speed-test/</guid>
+      <guid>https://aaronkjones.com/blog/vpn-speed-test/</guid>
       <description>&lt;p&gt;This script will automate selecting the best VPN server from a given list of servers your provider offers.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Noobs Term</title>
-      <link>https://aaronkjones.com/post/noobs-term/</link>
+      <link>https://aaronkjones.com/blog/noobs-term/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://aaronkjones.com/post/noobs-term/</guid>
+      <guid>https://aaronkjones.com/blog/noobs-term/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://noobs-term.com&#34;&gt;Noobs Term&lt;/a&gt; is a terminal bundle that combines a few powerful programs with &amp;ldquo;sensible&amp;rdquo; configurations and a beautiful theme.&lt;/p&gt;
 
 &lt;p&gt;I made Noobs Term to give people a foundation from which they can begin working with Zsh and Tmux without being overwhelmed with many customizations and options up front. When I first started using Zsh and Tmux, I found many configurations that offered some customization that I liked and some I either didn&amp;rsquo;t like or didn&amp;rsquo;t understand.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>https://aaronkjones.com/projects/</link>
-      <pubDate>Mon, 05 Nov 2018 19:57:28 -0800</pubDate>
-      
-      <guid>https://aaronkjones.com/projects/</guid>
-      <description>noobs-term: A terminal bundle for everyone</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://aaronkjones.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://aaronkjones.com/about/</guid>
-      <description>I am a DevOps Engineer, based out of San Diego, California. I grew up in Tennessee and served in the United States Marine Corps in San Diego. I studied Computer Science and Information Systems at the University of Utah in Salt Lake City, Utah. Since moving back to San Diego, I have worked as a DevOps Engineer at Qualcomm Incorporated. If you would like to connect, feel free to email me.</description>
     </item>
     
   </channel>
