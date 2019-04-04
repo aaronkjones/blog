@@ -1,5 +1,5 @@
 ---
-title: Home Assistant Security System (Part 1)
+title: Home Assistant Security System
 tags: ["Home Assistant", "Raspberry Pi"]
 date: 2019-03-15
 draft: false
