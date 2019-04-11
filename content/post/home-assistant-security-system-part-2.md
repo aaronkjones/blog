@@ -7,10 +7,9 @@ draft: false
 
 This is part two of the [Home Assistant Security System](https://aaronkjones.com/blog/home-assistant-security-system) guide. In this part, I show how I configured a dashboard display to complete my HA security system, to give visual feedback and, optionally, be used to manually arm the system. 
 
-This allows me to be alert if any door or window is opened while the family is not home and we can quickly glance at the display to see if anything is open before leaving.
+This alerts us if any door or window is opened while the family is not home and we can quickly glance at the display to see if anything is open before heading out the door.
 
 This guide assumes you followed [part one](https://aaronkjones.com/blog/home-assistant-security-system).
-
 
 <!--more-->
 
@@ -75,7 +74,7 @@ sudo apt-get -y install unclutter
 
 ### Create the script
 
-```
+```bash
 mkdir -p /home/pi/.bin/
 vim /home/pi/.bin/hassdash.sh
 ```
@@ -96,7 +95,7 @@ chromium-browser --disable-infobars --kiosk --force-device-scale-factor=0.90 htt
 vim /etc/systemd/system/hassdash.service
 ```
 
-Insert this and save
+Insert this and save:
 
 ```bash
 [Unit]
@@ -136,7 +135,7 @@ I configured Lovelace to display each Z-wave sensor status.
 
 ![](https://i.imgur.com/vZz6pWj.png)
 
-```
+```bash
 views:
   - cards:
       - type: entities
@@ -171,15 +170,15 @@ I plan on trying to use [lovelace-card-modder](https://github.com/thomasloven/lo
 
 ![](https://i.imgur.com/iABCVUX.jpg)
 
-This part is tricky since each person's situation is different. In my case, there was an existing alarm panel that was installed when the house was built. I had to make the hole larger. I will share a couple takeaways from my experience.
+This part is tricky since each person's situation is different. In my case, there was an existing alarm panel that was installed when the house was built (also the reason why the paint is mismatched in the picture above). I had to make the hole larger and I will share a couple takeaways from my experience.
 
-**Watch out for electrical lines**. Use a stud finder with wire detection and consulting an electrician.
+- **Watch out for electrical lines**. Use a stud finder with wire detection and consulting an electrician.
 
-Using a level may not be the best way to go. Our house must be slightly uneven. If I had cut the hole level, it would have looked unlevel compared to the edge above it. Hard to explain, but if you have another hole or edge close by such as a power outlet, try measuring and using a level compared to that.
+- Using a level may not be the best way to go. If I had cut the hole perfectly level, it would have looked unlevel compared to the edge above it. This is hard to explain, but if you have another edge close by such as a shelf, make sure they line up evenly.
 
-Making a hole slightly smaller than the display back will allow you to *pop* the display snuggly in place. It is almost difficult to remove, so I don't have to worry about it falling out.
+- Making a hole slightly smaller than the display back will allow you to *pop* the display snuggly in place. It is almost difficult to remove, so I don't have to worry about it falling out. However, drywall is not very durable around the edges, so time will tell if inserting and removing the display will wear the hole larger.
 
-The seal on the back of the display is not perfect. Drywall dust got in behind the glass, but I was able to blow it out with compressed air. I may seal the display with silicone in the future.
+- The seal on the back of the display is not perfect. Drywall dust got in behind the glass, but I was able to blow it out with compressed air. I may seal the display with silicone in the future.
 
 ## Conclusion
 
