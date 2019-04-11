@@ -11,13 +11,16 @@ This is part one of a high-level guide that will get you started out with Home A
 
 ## Overview
 
-- Materials Used
-- Installing Home Assistant
-- Configuring Z-Wave
-- Adding Z-Wave Sensors
-- Configuring Notifications
-- Creating a Notification Automation
-- Testing Notification Automation
+- [Materials Used](#materials-used)
+- [Installing Home Assistant](#installing-home-assistant)
+- [Configuring Z-Wave](#configuring-z-wave)
+- [Adding Z-Wave Sensors](#adding-z-wave-sensors)
+- [Configuring Notifications](#configuring-notifications)
+- [Creating a Notification Automation](#creating-a-notification-automation)
+  * [Through the Web UI](#through-the-web-ui)
+  * [From the CLI](#from-the-cli)
+- [Testing Notification Automation](#testing-notification-automation)
+- [Conclusion](#conclusion)
 
 ## Materials Used
 
