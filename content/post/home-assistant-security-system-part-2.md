@@ -1,16 +1,29 @@
 ---
-title: "Home Assistant Security System (Part 2)"
-date: 2019-03-25T12:48:33+01:00
-draft: true
+title: Home Assistant Security System (Part 2)
+tags: ["Home Assistant", "Raspberry Pi"]
+date: 2019-04-11
+draft: false
 ---
-
-## Introduction
 
 This is part two of the [Home Assistant Security System](https://aaronkjones.com/blog/home-assistant-security-system) guide. In this part, I show how I configured a dashboard display to complete my HA security system, to give visual feedback and, optionally, be used to manually arm the system. This guide assumes you followed [part one](https://aaronkjones.com/blog/home-assistant-security-system).
 
+<!--more-->
+
 ## Overview
 
-
+- [Materials Used](#materials-used)
+- [Display Setup](#display-setup)
+- [Hassbian GUI (optional)](#hassbian-gui--optional-)
+- [Enable VNC](#enable-vnc)
+- [Chromium Kiosk Configuration](#chromium-kiosk-configuration)
+  * [Install unclutter](#install-unclutter)
+  * [Create the script](#create-the-script)
+  * [Create the service](#create-the-service)
+  * [Enable the service](#enable-the-service)
+  * [Start the service](#start-the-service)
+- [Configure Home Assistant](#configure-home-assistant)
+- [Mounting the Display](#mounting-the-display)
+- [Conclusion](#conclusion)
 
 ## Materials Used
 
@@ -40,22 +53,22 @@ sudo reboot
 
 It's helpful to be able to VPN into the dashboard when you need to, such as initial log in.
 
-```
-sudo raspi-config
-```
-Select `Interfacing Options > VNC`
+- `sudo raspi-config`
+- select `Interfacing Options > VNC` and enable
 
 ## Chromium Kiosk Configuration
 
 Next, we want to have the dashboard load on boot.
 
-### Install unclutter (hides mouse cursor when idle)
+### Install unclutter
 
 ```bash
 sudo apt-get -y install unclutter
 ```
 
-### Create Hassdash script
+> Unclutter hides the mouse cursor when idle.
+
+### Create the script
 
 ```
 mkdir -p /home/pi/.bin/
@@ -72,16 +85,100 @@ sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/pi/.config/chromium
 chromium-browser --disable-infobars --kiosk --force-device-scale-factor=0.90 https://www.home-assistant.io
 ```
 
-## Home Assistant Configuration
+### Create the service
+
+```bash
+vim /etc/systemd/system/hassdash.service
+```
+
+Insert this and save
+
+```bash
+[Unit]
+Description=Hass Dash
+Wants=graphical.target
+After=graphical.target
+
+[Service]
+Type=simple
+User=pi
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStart=/bin/bash /home/pi/.bin/hassdash.sh
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
+```
+
+### Enable the service
+
+```bash
+systemctl enable hassdash
+```
+
+### Start the service
+
+```bash
+systemctl start hassdash
+```
+
+> You can check if the service started succesfully with `systemctl status hassdash`
+
+## Configure Home Assistant
+
+I configured Lovelace to display each Z-wave sensor status.
+
+![](https://i.imgur.com/vZz6pWj.png)
+
+```
+views:
+  - cards:
+      - type: entities
+        entities:
+          - entity: binary_sensor.ecolink_door_window_sensor_sensor
+          - entity: binary_sensor.ecolink_door_window_sensor_sensor_11
+          - entity: binary_sensor.ecolink_door_window_sensor_sensor_3
+          - entity: binary_sensor.ecolink_door_window_sensor_sensor_4
+          - entity: binary_sensor.ecolink_door_window_sensor_sensor_5
+          - entity: binary_sensor.ecolink_door_window_sensor_sensor_6
+          - entity: binary_sensor.ecolink_door_window_sensor_sensor_2
+    panel: false
+    title: Sensors
+    badges: []
+  - cards:
+      - type: alarm-panel
+        states:
+          - arm_home
+          - arm_away
+        entity: alarm_control_panel.home_alarm
+    title: Alarm
+    badges: []
+```
+
+You could also configure it to act as a manual alarm panel, but I could not get it to fit on a 7" display.
+
+![](https://i.imgur.com/m46OYFI.jpg)
+
+I plan on trying to use [lovelace-card-modder](https://github.com/thomasloven/lovelace-card-modder) and [Kiosk mode](https://gist.github.com/ciotlosm/1f09b330aa5bd5ea87b59f33609cc931) to try to get that looking better.
 
 ## Mounting the Display
 
+![](https://i.imgur.com/iABCVUX.jpg)
+
 This part is tricky since each person's situation is different. In my case, there was an existing alarm panel that was installed when the house was built. I had to make the hole larger. I will share a couple takeaways from my experience.
 
-**Watch out for electrical lines**. While I was making the hole larger I noticed there were power lines for a light switch near by. Since there was an existing hole I could see inside. If you are cutting a new hole, I recommend using a stud finder with wire detection and consulting an electrician.
+**Watch out for electrical lines**. Use a stud finder with wire detection and consulting an electrician.
 
-Using a level may not be the best way to go. There is an edge above where my panel is and if I had used a level when cutting a hole, it would not be perfectly parallel to that edge. Instead, I used a measuring tape from that edge to where I wanted the panel.
+Using a level may not be the best way to go. Our house must be slightly uneven. If I had cut the hole level, it would have looked unlevel compared to the edge above it. Hard to explain, but if you have another hole or edge close by such as a power outlet, try measuring and using a level compared to that.
 
 Making a hole slightly smaller than the display back will allow you to *pop* the display snuggly in place. It is almost difficult to remove, so I don't have to worry about it falling out.
 
-The seal on the back of the display is not perfect. Drywall dust go in behind the glass, but I was able to blow it out with compressed air. I may seal the display with silicone in the future.
+The seal on the back of the display is not perfect. Drywall dust got in behind the glass, but I was able to blow it out with compressed air. I may seal the display with silicone in the future.
+
+## Conclusion
+
+Let me know if you have questions and also check out these wonderful sources for more information.
+
+- [Home Assistant Documentation](https://www.home-assistant.io/docs/)
+- [/r/homeassistant](http://reddit.com/r/homeassistant/)
