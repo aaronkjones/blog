@@ -5,7 +5,12 @@ date: 2019-04-11
 draft: false
 ---
 
-This is part two of the [Home Assistant Security System](https://aaronkjones.com/blog/home-assistant-security-system) guide. In this part, I show how I configured a dashboard display to complete my HA security system, to give visual feedback and, optionally, be used to manually arm the system. This guide assumes you followed [part one](https://aaronkjones.com/blog/home-assistant-security-system).
+This is part two of the [Home Assistant Security System](https://aaronkjones.com/blog/home-assistant-security-system) guide. In this part, I show how I configured a dashboard display to complete my HA security system, to give visual feedback and, optionally, be used to manually arm the system. 
+
+This allows me to be alert if any door or window is opened while the family is not home and we can quickly glance at the display to see if anything is open before leaving.
+
+This guide assumes you followed [part one](https://aaronkjones.com/blog/home-assistant-security-system).
+
 
 <!--more-->
 
