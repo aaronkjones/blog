@@ -162,7 +162,7 @@ views:
 
 You could also configure it to act as a manual alarm panel, but I could not get it to fit on a 7" display.
 
-![](https://i.imgur.com/m46OYFI.jpg)
+![](https://i.imgur.com/I7drdEE.jpg)
 
 I plan on trying to use [lovelace-card-modder](https://github.com/thomasloven/lovelace-card-modder) and [Kiosk mode](https://gist.github.com/ciotlosm/1f09b330aa5bd5ea87b59f33609cc931) to try to get that looking better.
 
