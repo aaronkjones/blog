@@ -35,7 +35,6 @@ copyright = "Copyright © 2019"
 [params]
   author = "Aaron Jones"
   bg = "images/grey-prism.svg"
-  avatar = "img/logo.png"
   seotitle = "Aaron Jones"
   subtitle = ""
   description = "Blog of Aaron Jones"
