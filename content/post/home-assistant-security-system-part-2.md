@@ -35,10 +35,11 @@ This guide assumes you followed [part one](https://aaronkjones.com/blog/home-ass
 * [Raspberry Pi LCD - 7" Touchscreen](https://amzn.to/2uqyCB1) - 64.95
 * [Raspberry Pi 3 B+](https://amzn.to/2FAVQe7) - 39.9
 * [SanDisk 32GB microSD Card](https://amzn.to/2HGCKp2) - 7.30
-* [TP-Link PoE Injector](https://amzn.to/2Pfi0WB) - $15.71
+* [TP-Link PoE Injector](https://amzn.to/2KydLXi) - $15
+* [TP-Link PoE Injector Adaptor](https://amzn.to/2Pfi0WB) - $15.71
 * [Micro USB PoE Splitter](https://amzn.to/2X1FQaS) - $10
 
-Total cost: ~ $135
+Total cost: ~ $150
 
 ## Display Setup
 
@@ -172,8 +173,12 @@ I plan on trying to use [lovelace-card-modder](https://github.com/thomasloven/lo
 ## Powering the Display
 
  ![](https://i.imgur.com/vHW73rA.jpg)
- 
-To power the display I wanted to make sure there were no visible wires. I ran an ethernet cable from my Ubiquiti PoE switch down to the display. I believe any PoE switch should work. In my case I already had supplies for making ethernet cables. You may not and instead choose to buy a premade one of the appropriate length.
+
+To power the display I wanted to make sure there were no visible wires. To do so, I ran an ethernet cable from my [Ubiquiti PoE switch](https://amzn.to/2G9juxj) down to the display. In my case I already had supplies for making ethernet cables. You may not and instead choose to buy a pre-made one of the appropriate length.
+
+Luckily our house had an existing security system that I used to run the ethernet cable. I tapped one end of the ethernet cable to the existing wire at the security panel, then pulled the existing wire upstairs, thus pulling the ethernet cable upstairs to the switch. 
+
+If you don't have a PoE switch you can get an injector for much cheaper, like this one from [TP-Link](https://amzn.to/2KydLXi).
 
 ## Mounting the Display
 
