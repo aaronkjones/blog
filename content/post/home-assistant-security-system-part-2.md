@@ -26,16 +26,19 @@ This guide assumes you followed [part one](https://aaronkjones.com/blog/home-ass
   * [Enable the service](#enable-the-service)
   * [Start the service](#start-the-service)
 - [Configure Home Assistant](#configure-home-assistant)
+- [Powering the Display](#powering-the-display)
 - [Mounting the Display](#mounting-the-display)
 - [Conclusion](#conclusion)
 
 ## Materials Used
 
 * [Raspberry Pi LCD - 7" Touchscreen](https://amzn.to/2uqyCB1) - 64.95
-* [Raspberry Pi 3 B+](https://amzn.to/2FAVQe7) - 39.95
+* [Raspberry Pi 3 B+](https://amzn.to/2FAVQe7) - 39.9
 * [SanDisk 32GB microSD Card](https://amzn.to/2HGCKp2) - 7.30
+* [TP-Link PoE Injector](https://amzn.to/2Pfi0WB) - $15.71
+* [Micro USB PoE Splitter](https://amzn.to/2X1FQaS) - $10
 
-Total cost: ~ $110
+Total cost: ~ $135
 
 ## Display Setup
 
@@ -165,6 +168,10 @@ You could also configure it to act as a manual alarm panel, but I could not get 
 ![](https://i.imgur.com/I7drdEE.jpg)
 
 I plan on trying to use [lovelace-card-modder](https://github.com/thomasloven/lovelace-card-modder) and [Kiosk mode](https://gist.github.com/ciotlosm/1f09b330aa5bd5ea87b59f33609cc931) to try to get that looking better.
+
+## Powering the Display
+
+To power the display I wanted to make sure there were no visible wires. I ran an ethernet cable from my Ubiquiti PoE switch down to the display. I believe any PoE switch should work. In my case I already had supplies for making ethernet cables. You may not and instead choose to buy a premade one of the appropriate length.
 
 ## Mounting the Display
 
