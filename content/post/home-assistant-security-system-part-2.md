@@ -171,6 +171,8 @@ I plan on trying to use [lovelace-card-modder](https://github.com/thomasloven/lo
 
 ## Powering the Display
 
+ ![](https://i.imgur.com/vHW73rA.jpg)
+ 
 To power the display I wanted to make sure there were no visible wires. I ran an ethernet cable from my Ubiquiti PoE switch down to the display. I believe any PoE switch should work. In my case I already had supplies for making ethernet cables. You may not and instead choose to buy a premade one of the appropriate length.
 
 ## Mounting the Display
