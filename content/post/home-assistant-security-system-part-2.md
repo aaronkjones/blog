@@ -33,13 +33,12 @@ This guide assumes you followed [part one](https://aaronkjones.com/blog/home-ass
 ## Materials Used
 
 * [Raspberry Pi LCD - 7" Touchscreen](https://amzn.to/2uqyCB1) - 64.95
-* [Raspberry Pi 3 B+](https://amzn.to/2FAVQe7) - 39.9
+* [Raspberry Pi 3 B+](https://amzn.to/2FAVQe7) - 39.90
 * [SanDisk 32GB microSD Card](https://amzn.to/2HGCKp2) - 7.30
-* [TP-Link PoE Injector](https://amzn.to/2KydLXi) - $15
 * [TP-Link PoE Injector Adaptor](https://amzn.to/2Pfi0WB) - $15.71
 * [Micro USB PoE Splitter](https://amzn.to/2X1FQaS) - $10
 
-Total cost: ~ $150
+Total cost: ~ $140
 
 ## Display Setup
 
