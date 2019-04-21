@@ -52,20 +52,31 @@ I wanted to use the same Raspberry Pi for Home Assistant and the dashboard displ
 ```bash
 sudo apt-get update && apt-get -y upgrade
 sudo apt-get -y install --no-install-recommends xserver-xorg xinit raspberrypi-ui-mods lxterminal gvfs
-sudo apt-get -y install lightdm
+sudo apt-get -y install lightdm lxsession
 sudo reboot
 ```
 
 ## Enable VNC
 
-It's helpful to be able to VPN into the dashboard when you need to, such as initial log in.
+It's helpful to be able to VNC into the dashboard when you need to, such as initial log in.
 
 - `sudo raspi-config`
 - select `Interfacing Options > VNC` and enable
 
+## Enable Auto-login
+
+- `sudo raspi-config`
+- select `Boot Options > Desktop > Desktop Autologin`
+
 ## Chromium Kiosk Configuration
 
 Next, we want to have the dashboard load on boot.
+
+### Install Chromium Browser
+
+```bash
+sudo apt-get -y install chromium-browser
+```
 
 ### Install unclutter
 
